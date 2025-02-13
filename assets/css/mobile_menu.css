@@ -1,0 +1,232 @@
+
+.mobile-menu {
+    width: 300px;
+    background-color: #004992;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: -320px;
+    z-index: 999;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    overflow-y: scroll;
+  }
+  .mobile-menu.open {
+    right: 0px;
+  }
+  .mobile-menu .close-btn {
+    padding: 20px 30px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    float: left;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+  }
+  .mobile-menu .close-btn:hover {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  .mobile-menu .mobile-logo {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  .mobile-menu .links {
+    padding: 40px;
+  }
+  .mobile-menu .links li {
+    padding: 10px 0;
+  }
+  .mobile-menu .links li.list {
+    position: relative;
+  }
+  .mobile-menu .links li.list .drop-down-btn {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 5;
+  }
+  .mobile-menu .links li.list .drop-down-btn.open {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+  }
+  .mobile-menu .links li.list ul.dropdown {
+    display: none;
+  }
+  .mobile-menu .links li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 1px solid #366695;
+    display: block;
+    padding-bottom: 7px;
+  }
+  .main-header .mobile-nav-toggler {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    color: #004992;
+    display: none;
+  }
+  .mobile-nav-toggler {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    color: #004992;
+    display: none;
+}@media (max-width: 991px) {
+    .main-header .mobile-nav-toggler {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+ 
+    .main-header .mobile-nav-toggler {
+        right: 20px;
+        font-size: 35px;
+    }
+}
+.mobile-menu {
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+.mobile-menu.active {
+    display: block;
+}
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.header {
+    background: black;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header__menu ul li {
+    margin: 0 15px;
+}
+
+.header__menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header__menu ul li a:hover {
+    color: #f39c12;
+}
+
+.header__nav__option img {
+    width: 25px;
+    margin: 0 10px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    background: black;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+    overflow-y: hidden;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.mobile-menu ul li {
+    padding: 10px;
+    width: 100%;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .header__menu {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}

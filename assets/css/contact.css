@@ -1,0 +1,49 @@
+.socail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  .socail li a {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #fff;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+  .socail li a.facebook {
+    background-color: #3B5998;
+  }
+  .socail li a.twitter {
+    background-color: #1DA1F2;
+  }
+  .socail li a.tiktok {
+    background-color: #000000;
+  }
+  .socail li a.whatsapp {
+    background-color: #41c452;
+  }
+  .socail li a.instagram {
+    background-color: #f0592d;
+  }
+  .socail li a:hover {
+    background-color: #004992;
+  }
+  
