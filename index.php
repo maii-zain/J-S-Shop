@@ -12,26 +12,6 @@ function setLE($price)
 }
 ?>
 <style>
-     .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        width: 60px;
-        height: 60px;
-        z-index: 1000;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .whatsapp-button img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .whatsapp-button:hover {
-        transform: scale(1.1);
-    }
     .shipping-tape {
         position: fixed;
         top: 0;
@@ -56,6 +36,26 @@ function setLE($price)
     @keyframes moveText {
         from { transform: translateX(100%); }
         to { transform: translateX(-100%); }
+    }
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .whatsapp-button img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.1);
     }
 </style>
 
@@ -123,10 +123,10 @@ function setLE($price)
 
                             <?php if ($row['product_special_offer'] > 0): ?>
                                 <h5 style="text-decoration: line-through; color: gray;">
-                                    <?php echo setLE($row['product_price']); ?>
+                                    <?php echo setLE(max($row['product_price'], $row['product_special_offer'])); ?>
                                 </h5>
                                 <h5 style="color: red; font-weight: bold;">
-                                    <?php echo setLE($row['product_special_offer']); ?>
+                                    <?php echo setLE(min($row['product_price'], $row['product_special_offer'])); ?>
                                 </h5>
                             <?php else: ?>
                                 <h5><?php echo setLE($row['product_price']); ?></h5>
