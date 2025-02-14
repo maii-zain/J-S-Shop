@@ -1,16 +1,48 @@
 <?php include('layouts/header.php'); ?>
 <!-- Breadcrumb Section Begin -->
 <style>
-    .testimonial {
-        width: 100%;
-        padding: 40px 0;
-    }
+   .testimonial {
+    width:90%;
+    padding: 60px 0;
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
 
+/* Background Particles */
+.testimonial::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    top: -100px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: float 6s infinite ease-in-out;
+}
+
+.testimonial::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 123, 255, 0.2);
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: float 8s infinite ease-in-out;
+}
     .testimonial__text {
         width: 100%;
         padding: 40px;
         border-radius: 10px;
-        background-color: #f8f9fa; /* لون خلفية خفيف */
+        background-color: #f8f9fa; 
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -29,24 +61,13 @@
         text-align: justify;
     }
 
-    .testimonial__text p::before {
-        content: "“";
-        font-size: 30px;
-        color: #007bff;
-        margin-right: 5px;
-    }
-
-    .testimonial__text p::after {
-        content: "”";
-        font-size: 30px;
-        color: #007bff;
-        margin-left: 5px;
-    }
+    
 
     .testimonial__text p b {
         color: #222;
         font-weight: 700;
     }
+    
 </style>
 <section class="breadcrumb-option">
     <div class="container">
