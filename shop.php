@@ -1,9 +1,9 @@
 <style>
     .product__item__text .add-cart {
-    display: block !important; /* اجعل الزر مرئيًا دائمًا */
+    display: block !important; 
     opacity: 1 !important;
     visibility: visible !important;
-    transition: none; /* إزالة أي تأثيرات قد تخفيه */
+    transition: none; 
 }
 .product__item:hover .add-cart {
     opacity: 1;
@@ -383,7 +383,7 @@ include('layouts/header.php');
                                     </ul>
                                 </div>
                                 <?php
-$exchange_rate = 30; // مثال: سعر الصرف 1 دولار = 30 جنيه مصري
+$exchange_rate = 48; //  الصرف 1 دولار = 50 جنيه مصري
 ?>
 
 <div class="product__item__text">

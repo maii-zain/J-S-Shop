@@ -60,20 +60,20 @@ function setLE($price)
 
     .carousel {
         width: 100%;
-        max-width: 8; /* Reduce max width */
-        height: 1200px; /* Adjust height without cutting */
+        max-width: 8;
+        height: 1200px; 
         margin: auto;
         overflow: hidden;
         position: relative;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        background: black; /* Prevent gaps around images */
+        background: black; 
     }   
 
     .carousel img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensure full image is visible */
+        object-fit: cover; 
         display: none;
         opacity: 0;
         transition: opacity 1s ease-in-out;
@@ -157,11 +157,11 @@ function setLE($price)
 
     .product__row {
         display: flex;
-        flex-wrap: nowrap; /* Keep products in a single line */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        gap: 20px; /* Space between products */
-        padding-bottom: 10px; /* Avoid scrollbar overlapping */
-        margin-bottom: 30px; /* Space between rows */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        gap: 20px; 
+        padding-bottom: 10px; 
+        margin-bottom: 30px; 
     }
 
     .product__item {
