@@ -1,3 +1,21 @@
+<style>
+    .product__item__text .add-cart {
+    display: block !important; /* اجعل الزر مرئيًا دائمًا */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none; /* إزالة أي تأثيرات قد تخفيه */
+}
+.product__item:hover .add-cart {
+    opacity: 1;
+    visibility: visible;
+}
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+</style>
 <?php
 include('server/connection.php');
 
@@ -364,31 +382,29 @@ include('layouts/header.php');
                                         <li><a href="#"><img src="assets/img/icon/search.png" alt=""></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__item__text">
-                                    <h6><?php echo $row['product_name']; ?></h6>
-                                    <h5><?php echo $row['product_brand']; ?></h5>
-                                    <a href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>" class="add-cart">Quick view</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                    </div>
-                                    <h5><?php echo setRupiah($row['product_price'] * $kurs_dollar); ?></h5>
-                                    <div class="product__color__select">
-                                        <label for="pc-4">
-                                            <input type="radio" id="pc-4">
-                                        </label>
-                                        <label class="active black" for="pc-5">
-                                            <input type="radio" id="pc-5">
-                                        </label>
-                                        <label class="grey" for="pc-6">
-                                            <input type="radio" id="pc-6">
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                                <?php
+$exchange_rate = 30; // مثال: سعر الصرف 1 دولار = 30 جنيه مصري
+?>
+
+<div class="product__item__text">
+    <h6><?php echo $row['product_name']; ?></h6>
+    <h5><?php echo $row['product_brand']; ?></h5>
+    
+    <!-- زر Quick View والسعر في نفس السطر -->
+    <div class="product-actions">
+        <a href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>" class="add-cart">Quick view</a>
+        <span class="product-price"><?php echo number_format($row['product_price'] * $exchange_rate, 2) . " LE"; ?></span>
+    </div>
+
+    <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="far fa-star"></i>
+    </div>
+</div>
+           </div>
                         </div>
                     <?php } ?>
                 </div>
